@@ -4436,16 +4436,13 @@
                             modules: [ Scrollbar, Pagination ],
                             el: ".swiper-mini",
                             slidesPerView: "4.3",
-                            direction: "vertical",
+                            direction: "horizontal",
                             spaceBetween: 10,
                             breakpoints: {
                                 320: {
                                     direction: "horizontal",
                                     slidesPerView: "7",
                                     spaceBetween: 5
-                                },
-                                400: {
-                                    spaceBetween: 10
                                 },
                                 450: {
                                     spaceBetween: 10,
@@ -4495,16 +4492,13 @@
                             modules: [ Scrollbar, Pagination ],
                             el: ".swiper-mini-popup",
                             slidesPerView: 7.3,
-                            direction: "vertical",
+                            direction: "horizontal",
                             spaceBetween: 10,
                             breakpoints: {
                                 320: {
                                     direction: "horizontal",
                                     slidesPerView: "7",
                                     spaceBetween: 5
-                                },
-                                400: {
-                                    spaceBetween: 10
                                 },
                                 450: {
                                     spaceBetween: 10,
