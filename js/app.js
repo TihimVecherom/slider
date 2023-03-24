@@ -6211,3 +6211,92 @@ PERFORMANCE OF THIS SOFTWARE.
         isWebp();
     })();
 })();
+
+
+function run(){
+ 
+    const gallery= document.querySelector(".gallery-popup"); 
+    
+    const galleryup= document.querySelector(".gallery-up"); 
+    
+    const galleryActiveSlide= document.getElementsByClassName("swiper-slide-active"); 
+    
+    const galleryPopupActiveSlide= gallery.getElementsByClassName("swiper-slide-active"); 
+    
+    const galleryAllSlides= document.getElementsByClassName("swiper-slide__image"); 
+    const galleryPopUpSlides= gallery.getElementsByClassName("swiper-slide__image"); 
+    const swiperSlideImageActive= gallery.getElementsByClassName("swiper-slide__image");  
+    const panelClose= document.querySelector(".panel-gallery-close");   
+    let zoomed = 'false';
+    let startPX =0;
+    let sartPY=0;
+    
+    
+    panelClose.addEventListener("click", (function(e) {
+        gallery.style="none"
+    
+    }));
+    console.log(galleryActiveSlide[1])
+    
+    
+    
+    for(let i=0; i<galleryAllSlides.length; i++){
+    
+     console.log(galleryAllSlides[i].parentNode)
+        
+    
+    galleryAllSlides[i].addEventListener("click", (function(e ) {
+      
+        openGallery()
+    }));
+    
+    }
+    
+    
+    
+    for(let i=0; i<galleryPopUpSlides.length; i++){
+     galleryPopUpSlides[i].addEventListener("pointerdown", (function(e) {
+        galleryPopUpSlides[i].style='cursor:zoom-in!important'
+        if(zoomed=='false'){
+            galleryPopupActiveSlide[1].childNodes[1].style='overflow:hidden; border:5px solid gray'
+            galleryPopupActiveSlide[1].childNodes[1].childNodes[1].style.transform='scale(3,3)'
+            startPX = e.pageX;
+            startPY = e.pageY;
+            zoomed='true'  
+        } else {
+            galleryPopupActiveSlide[1].childNodes[1].childNodes[1].style.transform='scale(1,1)'
+        zoomed='false'   
+        galleryPopupActiveSlide[1].childNodes[1].style='overflow:hidden; border:0px solid gray'
+        }
+      })); 
+    
+    
+      galleryPopUpSlides[i].addEventListener("pointermove", (function(e) {
+        if(zoomed=='true'){
+    
+            let offsetX = e.pageX-startPX
+            let offsetY = e.pageY-startPY
+            
+           galleryPopupActiveSlide[1].childNodes[1].childNodes[1].style.transform='scale(3,3) translate('+offsetX+'px,'+offsetY+'px)'
+        }
+      })); 
+    
+    
+      
+          
+    }
+    
+    
+    
+    function openGallery(e){
+    
+        gallery.style="display:flex"
+        console.log(e)
+    }
+    
+    
+    }
+    
+    
+    
+    var timeoutID = window.setTimeout(run ,200);

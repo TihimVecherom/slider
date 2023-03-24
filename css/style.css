@@ -147,7 +147,7 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   max-height: 80px;
   border-bottom: 1px solid #E5E5E5;
   padding-left: 20px;
@@ -362,7 +362,7 @@ h6 {
 
 .gallery-popup {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   left: 0;
   z-index: 1000;
@@ -374,11 +374,13 @@ h6 {
 }
 
 .gallery-popup .gallery {
+  width: 100vw;
   padding-top: 100px;
   height: 100vh;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
+
 }
 
 .swiper-button-prev {
@@ -519,7 +521,7 @@ h6 {
 
 .swiper-slide__image img {
   position: absolute;
-  width: calc(100% - 80px);
+  width: 100%;
   height: 100%;
   top: 0;
   left: 50%;
@@ -2417,7 +2419,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
   .swiper-slide__image img {
-    width: 80%;
+
     left: 50%;
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
@@ -2494,7 +2496,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .swiper-main-popup .swiper-wrapper .swiper-slide__image img {
-    width: 100%;
+ width: 100%;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -2503,7 +2505,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .swiper-slide__image img {
-    width: 80%;
+    
     left: 50%;
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
