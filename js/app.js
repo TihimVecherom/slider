@@ -4423,6 +4423,14 @@
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"
                     },
+                    breakpoints: {
+                        320: {
+                            direction: "horizontal"
+                        },
+                        767.98: {
+                            direction: "vertical"
+                        }
+                    },
                     thumbs: {
                         swiper: {
                             modules: [ Scrollbar, Pagination ],
@@ -4473,6 +4481,14 @@
                     navigation: {
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"
+                    },
+                    breakpoints: {
+                        320: {
+                            direction: "horizontal"
+                        },
+                        767.98: {
+                            direction: "vertical"
+                        }
                     },
                     thumbs: {
                         swiper: {
